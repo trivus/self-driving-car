@@ -12,11 +12,16 @@ canny edge detection, image mask, then hough line transformation.
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function. 
 
-For each hough line, I assigned them to either left or right lane group, by their gradient. 
+I used polyfit and poly1d function from numpy library to extrapolate line segments into a 
+
+single straight line for each lanes. I assigned points from lines to either left or right lane group, 
+
+by their gradient.
 
 [grey_scale]: ./processed/grey_scale.jpg "Grayscale"
 [gaussian]: ./processed/gaussian.jpg "Gaussian"
 [Edge detection and ROI mask]: ./processed/roi.jpg "Edge detection and roi"
+
 
 For the optional challenge, the biggest obstacle was that the front hood of the car was in the video,
 
